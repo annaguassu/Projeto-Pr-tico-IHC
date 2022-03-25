@@ -4,7 +4,6 @@
   <li>Estilos de Interação</li>
   <li>Teoria de Gestalt</li>
   <li>Arquitetura de Informação</li>
-  <li>Estilos de Interação</li>
   <liPrincípios do Design</li>
   <li>Etc.</li>
 </ul>
