@@ -1,0 +1,163 @@
+/*variáveis*/
+
+body{
+    --bg-color: linear-gradient(180.9deg, #030303 31.24%, #4E1471 99.23%);
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-color);
+}
+
+.search-bar{
+    width: 70rem;
+    height: 42px;
+    left: 82px;
+    color:#A64DFF;
+    background-color: rgba(196, 196, 196, 0.16);
+    border: 1px solid #A64DFF;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+}
+
+.pesquisa{
+    text-align: center;
+}
+.btn-src{
+    width: 121px;
+    height: 43px;
+    color: #A64DFF;
+    background: rgba(196, 196, 196, 0.16);
+    border: 1px solid #A64DFF;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+}
+.btn-download{
+    width: 285px;
+    height: 57px;
+    color: #B5FF00;
+    background: rgba(196, 196, 196, 0.1);
+    border: 1px solid #B5FF00;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px);
+}
+.nav-link, .name, .slogan, .navbar-brand{
+    color: #B5FF00;
+}
+
+nav{
+    width: 100vw;
+}
+
+@media (min-width: 600px) and (max-width: 1400px) { 
+    .home{
+        margin-left: 4rem;
+        margin-top: 4rem;
+    }
+
+    .search-bar{
+        width: 80vw;
+    }
+}
+@media (max-width: 575.98px) { 
+
+    .search-bar{
+        width: 10rem;
+        height: 2rem;
+    }
+
+    .navbar{
+        padding-left: -10;
+    }
+    .btn-src{
+        width: 5rem;
+        height: 2.01rem;
+    }
+
+    .name{
+        font-size: 1.5rem;
+    }
+    .home{
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .slogan{
+        font-size: 0.7rem;
+    }
+    .btn-download{
+        width: 8rem;
+        height: 2rem;
+        text-align: center;
+        align-items: center;
+    }
+    .tab2, .copyright{
+        font-size: 0.5rem;
+    }
+    
+    #putamerda{
+       font-size: 1rem;
+    }
+
+    .nav-link{
+        font-size: 0.7rem;
+    }
+
+    .navbar-toggler{
+        color: #030303;
+        background-color: #030303;
+    }
+
+ }
+
+ .footer{
+    padding-bottom: 1px;
+    width: 100vw;
+    height: 5rem;
+    padding-bottom: -100rem;
+}
+/* Animation */
+
+.waves{
+    height: 10rem;
+    width: 100vw;
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+.parallax > use:nth-child(5) {
+    animation-delay: -5s;
+    animation-duration: 15s;
+}
+@keyframes move-forever {
+    0%{
+        transform: translate3d(-90px, 0, 0);
+    }
+    100%{
+        transform: translate3d(85px, 0, 0);
+    }
+}
+@media (max-width: 575.98px){
+    .waves{
+        height: 80px;
+        width: 100vw;
+        min-height: 40px;
+    }
+}
+
+.tab2{
+}
