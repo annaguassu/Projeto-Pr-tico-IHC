@@ -1,19 +1,55 @@
 /*variáveis*/
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Red+Hat+Mono:wght@300&family=Roboto:wght@300&family=Varela+Round&display=swap');
 body{
     --bg-color: linear-gradient(180.9deg, #030303 31.24%, #4E1471 99.23%);
     width: 100vw;
     height: 100vh;
     background: var(--bg-color);
+
+}
+*{
+    font-family: 'Red Hat Mono', monospace;
+}
+
+/* ---------------------------------- Nav ------------------------------- */
+nav{
+    width: 100vw;
+}
+.nav-link, .name, .linha, .navbar-brand{
+    color: #B5FF00;
+}
+
+.nav-link{
+    font-size: .8rem;
+}
+/* ---------------------------------- Home ------------------------------- */
+
+#home{
+    font-family: 'Red Hat Mono', monospace;
+}
+
+.linha{
+    color: #B5FF00;
+    font-family: 'Red Hat Mono', monospace;
+    position: relative;
+    overflow: hidden;
+    font-size: 100%;
+    white-space: nowrap;
+    margin: 0;
+    margin-bottom: 1rem;
+    
 }
 
 .search-bar{
+    margin-top: 2rem;
     width: 70rem;
     height: 42px;
     left: 82px;
     color:#A64DFF;
     background-color: rgba(196, 196, 196, 0.16);
     border: 1px solid #A64DFF;
+    box-shadow: 0 0 5px #A64DFF;
+    box-shadow: 0 0 15px #A64DFF;
     box-sizing: border-box;
     backdrop-filter: blur(4px);
 }
@@ -27,27 +63,31 @@ body{
     color: #A64DFF;
     background: rgba(196, 196, 196, 0.16);
     border: 1px solid #A64DFF;
+    box-shadow: 0 0 5px #A64DFF;
+    box-shadow: 0 0 15px #A64DFF;
     box-sizing: border-box;
     backdrop-filter: blur(8px);
 }
 .btn-download{
-    width: 285px;
+    width: 250px;
     height: 57px;
     color: #B5FF00;
     background: rgba(196, 196, 196, 0.1);
     border: 1px solid #B5FF00;
     box-sizing: border-box;
+    box-shadow: 0 0 5px #b5ff00;
+    box-shadow: 0 0 15px #b5ff00;
+    text-shadow: 0 0 15px #b5ff00;
     backdrop-filter: blur(5px);
 }
-.nav-link, .name, .slogan, .navbar-brand{
-    color: #B5FF00;
+
+.btn-download:hover{
+    background: #B5FF00;
+    color:#030303;
 }
 
-nav{
-    width: 100vw;
-}
-
-@media (min-width: 600px) and (max-width: 1450px) { 
+/* ---------------------------------- Responsividade ------------------------------- */
+@media (min-width: 600px) and (max-width: 1400px) { 
     .home{
         margin-left: 4rem;
         margin-top: 4rem;
@@ -59,6 +99,9 @@ nav{
 }
 @media (max-width: 575.98px) { 
 
+    .pesquisa{
+        font-size: 0.7rem;
+    }
     .search-bar{
         width: 10rem;
         height: 2rem;
@@ -70,6 +113,7 @@ nav{
     .btn-src{
         width: 5rem;
         height: 2.01rem;
+
     }
 
     .name{
@@ -79,7 +123,13 @@ nav{
         text-align: center;
         margin-top: 3rem;
     }
-    .slogan{
+    .efeito-digitacao{
+        justify-content: center;
+        align-items: center;
+    }
+    .linha{
+        justify-content: center;
+        align-items: center;
         font-size: 0.7rem;
     }
     .btn-download{
@@ -113,6 +163,8 @@ nav{
     height: 5rem;
     padding-bottom: -100rem;
 }
+
+/* ---------------------------------- footer ------------------------------- */
 /* Animation */
 
 .waves{
@@ -159,5 +211,120 @@ nav{
     }
 }
 
-.tab2{
+/* ----------------------------------------------------------------------------*/
+/* -------------------------------------- login page -------------------------------------------*/
+
+.center{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control:focus{
+    border: none;
+    text-decoration: none;
+}
+.glass-login{
+    font-family: 'Red Hat Mono', monospace;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 25vw;
+    height: 20em;
+    color: #B5FF00;
+    border-radius: 5px;
+    border: 2px solid #A64DFF;
+    background: #c4c4c442;
+    box-shadow: 0 0 5px #A64DFF;
+    box-shadow: 0 0 25px #A64DFF;
+    box-shadow: 0 0 30px #A64DFF;
+    letter-spacing: 1px;
+    backdrop-filter: blur(50px);
+}
+.login-title{
+    color: #bbff00;
+    border: #B5FF00;
+    text-shadow: 0 0 5px #B5FF00;
+    text-shadow: 0 0 15px #B5FF00;
+    text-shadow: 0 0 15px #B5FF00;
+    text-shadow: 0 0 25px #B5FF00;
+    text-align: center;
+}
+.btn-login{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 8rem;
+    height: 2.5rem;
+    background: #c4c4c442;
+    color: #B5FF00;
+    border: 2px solid #B5FF00;
+    transition: 0.3s;
+    letter-spacing: 2px;
+    margin-left: 4.9rem;
+    margin-top: 1rem;
+}
+
+.btn-login:hover{
+    box-shadow: 0 0 5px #B5FF00;
+    box-shadow: 0 0 15px #B5FF00;
+    box-shadow: 0 0 25px #B5FF00;
+    
+}
+
+/* -------------------------------------- Register page -------------------------------------------*/
+.glass-cadastro{
+    font-family: 'Red Hat Mono', monospace;
+    text-align: center;
+    width: 30vw;
+    color: #B5FF00;
+    border-radius: 5px;
+    border: 2px solid #A64DFF;
+    background: #c4c4c442;
+    box-shadow: 0 0 5px #A64DFF;
+    box-shadow: 0 0 25px #A64DFF;
+    box-shadow: 0 0 30px #A64DFF;
+    letter-spacing: 2px;
+    backdrop-filter: blur(50px);
+    padding-top: 2rem;
+}
+.btn-cadastro{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 8rem;
+    height: 2.5rem;
+    background: #c4c4c442;
+    color: #B5FF00;
+    border: 2px solid #B5FF00;
+    transition: 0.3s;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-cadastro:hover{
+    box-shadow: 0 0 5px #B5FF00;
+    box-shadow: 0 0 15px #B5FF00;
+    box-shadow: 0 0 25px #B5FF00;
+    
+}
+
+.input-neon{
+    width: 25rem;
+}
+
+.label1{
+    margin-left: -21rem;
+}
+.label2{
+    margin-left: -18rem;
+}
+.label3{
+    margin-left: -20.5rem;
+}
+.label4{
+    margin-left: -15.5rem;
 }
