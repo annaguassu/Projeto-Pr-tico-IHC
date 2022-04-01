@@ -10,8 +10,45 @@ body{
 *{
     font-family: 'Red Hat Mono', monospace;
 }
+/*--- Linhas ---*/
 
+.line1{
+    position: absolute;
+    width: 100vw;
+    top: 128px;
 
+    border: 1px solid rgba(166, 77, 255, 0.33);
+}
+
+.line2{
+    position: absolute;
+    width: 100vw;
+    top: 88px;
+    
+    border: 1px solid rgba(166, 77, 255, 0.33);
+}
+
+.line3{
+    position: absolute;
+    width: 100vw;
+    height: 0;
+    left: 0;
+    top: 360px;
+
+    border: 1px solid rgba(166, 77, 255, 0.33);
+}
+
+/*-------------------------------*/
+.btn-login.btn:focus, .btn-cadastro.btn:focus{
+    outline: 0;
+    box-shadow: 0 0 5px #b5ff00;
+    box-shadow: 0 0 15px #b5ff00;
+}
+
+input:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
 /* Botão Flutuante
 
 .tamanhin{
@@ -195,6 +232,11 @@ nav{
     color:#B5FF00;
 }
 
+.dropdown-menu{
+    background: #c4c4c442;
+    color: #b5ff00;
+}
+
 /* ---------------------------------- Home ------------------------------- */
 
 #home{
@@ -260,7 +302,7 @@ nav{
 }
 
 /* ---------------------------------- Responsividade ------------------------------- */
-@media (min-width: 600px) and (max-width: 1400px) { 
+@media (min-width: 600px) and (max-width: 1500px) { 
     .home{
         margin-left: 4rem;
         margin-top: 4rem;
@@ -270,13 +312,31 @@ nav{
         width: 80vw;
     }
 }
-@media (max-width: 575.98px) { 
+
+@media (max-width : 400px){
+    .glass-cadastro.container{
+        width: 10rem;
+    }
+}
+@media (max-width: 568.98px) { 
     .glass-login{
-        width: 30rem;
+        width: 100vw;
+        padding-left: 3rem;
         font-size:small;
     }
+    .line1{
+        top: 119px;
+    }
+    .remember{
+        font-size: 0.9rem;
+    }
+
+    .form-control{
+        height: 0.5rem;
+        width: 10px;
+    }
     .btn-login{
-        width: 1rem;
+        width: 0.5rem;
     }
     .login-title{
         font-size: 1rem;
@@ -337,13 +397,12 @@ nav{
         background-color: #030303;
     }
 
- }
-
- .footer{
-    padding-bottom: 1px;
-    width: 100vw;
-    height: 5rem;
-    padding-bottom: -100rem;
+    .footer{
+        padding-bottom: 1px;
+        width: 100vw;
+        height: 5rem;
+        justify-content: flex-end;
+    }
 }
 
 /* ---------------------------------- footer ------------------------------- */
@@ -404,17 +463,34 @@ nav{
     justify-content: center;
 }
 
+.btn:focus{
+    border-style: none;
+    border: 0;
+}
+
+.btn-login.btn{
+    background: #c4c4c442;
+    color: #B5FF00;
+    border: 1px solid #B5FF00;
+    transition: 0.3s;
+    letter-spacing: 2px;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    border-radius: 0;
+    margin-top: 1rem;
+}
 .form-control:focus{
     border: none;
     text-decoration: none;
 }
-.glass-login{
+.glass-login.container{
     font-family: 'Red Hat Mono', monospace;
     padding-top: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 25vw;
-    height: 20em;
+    width: 20rem;
+    height: 22em;
     color: #B5FF00;
     border-radius: 5px;
     border: 2px solid #A64DFF;
@@ -424,6 +500,7 @@ nav{
     box-shadow: 0 0 30px #A64DFF;
     letter-spacing: 1px;
     backdrop-filter: blur(50px);
+    justify-content: center;
 }
 .login-title{
     color: #bbff00;
@@ -434,19 +511,7 @@ nav{
     text-shadow: 0 0 25px #B5FF00;
     text-align: center;
 }
-.btn-login{
-    width: 8rem;
-    height: 2.5rem;
-    background: #c4c4c442;
-    color: #B5FF00;
-    border: 2px solid #B5FF00;
-    transition: 0.3s;
-    letter-spacing: 2px;
-    margin-left: 4.9rem;
-    margin-top: 1rem;
-}
-
-.btn-login:hover{
+.btn-login:hover, .btn:hover{
     box-shadow: 0 0 5px #B5FF00;
     box-shadow: 0 0 15px #B5FF00;
     box-shadow: 0 0 25px #B5FF00;
@@ -454,10 +519,10 @@ nav{
 }
 
 /* -------------------------------------- Register page -------------------------------------------*/
-.glass-cadastro{
+.glass-cadastro.container{
     font-family: 'Red Hat Mono', monospace;
     text-align: center;
-    width: 30vw;
+    width: 25rem;
     color: #B5FF00;
     border-radius: 5px;
     border: 2px solid #A64DFF;
@@ -469,22 +534,20 @@ nav{
     backdrop-filter: blur(50px);
     padding-top: 2rem;
 }
-.btn-cadastro{
+.btn-cadastro.btn{
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 8rem;
-    height: 2.5rem;
     background: #c4c4c442;
     color: #B5FF00;
-    border: 2px solid #B5FF00;
+    border: 1px solid #B5FF00;
     transition: 0.3s;
     letter-spacing: 2px;
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
 
-.btn-cadastro:hover{
+.btn-cadastro.btn:hover{
     box-shadow: 0 0 5px #B5FF00;
     box-shadow: 0 0 15px #B5FF00;
     box-shadow: 0 0 25px #B5FF00;
@@ -495,30 +558,12 @@ nav{
     width: 25rem;
 }
 
-.label1{
-    margin-left: -21rem;
-}
-.label2{
-    margin-left: -17rem;
-}
-.label3{
-    margin-left: -19rem;
-}
-.label4{
-    margin-left: -12.8rem;
+.form-group{
+    text-align: start;
 }
 
 /* ------------- Not Found Page -------------------------*/
 
-.div{
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    height: 100%;
-    width: 100%;
-    margin: 0px;
-    overflow: hidden;
-  }
   
   .wrap{
     position: absolute;
