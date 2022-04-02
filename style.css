@@ -313,6 +313,18 @@ nav{
     }
 }
 
+
+@media (max-width : 1600px){
+    .search-bar{
+        width:85vw;
+    }
+    
+    .home{
+        margin-left: 6rem;
+    }
+    
+}
+
 @media (max-width : 400px){
     .glass-cadastro.container{
         width: 10rem;
